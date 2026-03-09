@@ -1,6 +1,10 @@
 import type { Pokemon } from "@/lib/api/pokemon";
 
-export function PokemonCardStats({ pokemon }: { pokemon: Pokemon }) {
+type PokemonCardStatsProps = {
+    pokemon: Pokemon
+}
+
+export function PokemonCardStats({ pokemon }: PokemonCardStatsProps) {
     return (
         <div className="p-3 space-y-2 text-sm">
             <p className="text-sm text-muted-foreground">{pokemon.description}</p>

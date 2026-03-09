@@ -8,13 +8,13 @@ import { PokemonCardHeader } from './PokemonCardHeader'
 import { PokemonCardStats } from './PokemonCardStats'
 import { Card } from './ui/card'
 
-type Props = {
+type PokemonCardProps = {
     expanded: boolean
     onToggle: () => void
     pokemon: Pokemon
 }
 
-export default function PokemonCard({ expanded, onToggle, pokemon }: Props) {
+export default function PokemonCard({ expanded, onToggle, pokemon }: PokemonCardProps) {
     return (
         <Card className="overflow-hidden pt-0 cursor-pointer transition hover:shadow-md h-56 flex flex-col" onClick={onToggle}>
             {!expanded ? (
